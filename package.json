@@ -1,0 +1,34 @@
+{
+  "name": "messenger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.coffee",
+  "scripts": {
+    "start": "coffee server.coffee",
+    "dev": "npm run start & npm run watch",
+    "watch": "watchify index.coffee -o www/index.js -t coffeeify -t uglifyify --extension='.coffee'",
+    "expose": "npm run start & lt --port 1337"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "fela": "^5.0.4",
+    "fela-dom": "^5.0.5",
+    "human-date": "^1.4.0",
+    "inferno": "^3.7.0",
+    "inferno-component": "^3.7.0",
+    "inferno-hyperscript": "^3.7.0",
+    "koa": "^2.3.0",
+    "koa-static": "^4.0.1",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "coffeeify": "^2.1.0",
+    "faker": "^4.1.0",
+    "localtunnel": "^1.8.3",
+    "uglifyify": "^4.0.3",
+    "watchify": "^3.9.0"
+  }
+}
